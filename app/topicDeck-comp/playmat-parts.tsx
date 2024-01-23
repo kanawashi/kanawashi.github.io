@@ -1,5 +1,5 @@
 export interface CardProps {
-  children: React.ReactNode
+  children?: React.ReactNode
 }
 
 export function CardSpace (props: CardProps) {
