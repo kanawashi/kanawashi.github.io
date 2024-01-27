@@ -15,6 +15,7 @@
 		"git": "https://api.github.com/repos/kanawashi/kanawashi.github.io/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
 		"html": "https://github.com/kanawashi/kanawashi.github.io/blob/mavo-experiment/database/database.json"
 	},
-	"好きなプロ棋士": 3,
-	"お酒": 0
+	"好きなプロ棋士": 0,
+	"お酒": 0,
+	"将棋": 1
 }
