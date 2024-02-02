@@ -30,7 +30,7 @@ function PlayArea ({topic, isPlayed, empathizeHandler}: PlayArea) {
 
   return (
     <CardSpace>
-      <Card title={topic.title} sentence={topic.sentence} empathyDegree={topic.empathyDegree} empathizeHandler={empathizeHandler}/>
+      <Card topic={topic} empathizeHandler={empathizeHandler}/>
     </CardSpace>
   );
 }
@@ -73,7 +73,7 @@ export default function TopPage() {
       <header className="flex flex-row justify-between text-xl text-left p-5 bg-cyan-200">
         <h1 className="pt-2">kinoa kanawashiのポートフォリオ　目次 </h1>
         <a id="github-link" href="https://github.com/kanawashi">
-          <Image src="/github-mark.svg" alt="github-mark" width={50} height={50}></Image>
+          <Image src="/github-mark.svg" alt="github-mark" width={50} height={50}/>
         </a>
       </header>
       <div className="container mx-auto">

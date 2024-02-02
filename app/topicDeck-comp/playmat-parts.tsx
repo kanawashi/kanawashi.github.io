@@ -11,21 +11,25 @@ export function CardSpace (props: CardProps) {
 }
 
 export interface TopicDetail {
-  title: string,
-  sentence: string,
-  empathyDegree: number,
+  topic: {
+    title: string,
+    sentence: string,
+    imageUrl?: JSX.Element,
+    empathyDegree: number
+  },
   empathizeHandler: [number, Function]
 }
 
-export function Card ({title, sentence, empathyDegree, empathizeHandler}: TopicDetail) {
+export function Card ({ topic, empathizeHandler}: TopicDetail) {
   const [empathizedCount, setEmpathizedCount] = empathizeHandler;
 
   return (
     <div className="h-96 w-full mx-4 p-4 border-gray-800 bg-lime-200 shadow-lg shadow-gray-300 rounded-2xl">
-      <h3 className="text-center text-xl border-b border-black">{title}</h3>
-      <p>{sentence}</p>
+      <h3 className="text-center text-xl border-b border-black">{topic.title}</h3>
+      <p>{topic.sentence}</p>
+      { topic.imageUrl }
       <button 
-        onClick={() => setEmpathizedCount(empathizedCount + empathyDegree)}
+        onClick={() => setEmpathizedCount(empathizedCount + topic.empathyDegree)}
         className="bg-fuchsia-300 rounded-2xl"
       >
         いいねボタン
